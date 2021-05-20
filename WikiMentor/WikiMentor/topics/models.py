@@ -11,5 +11,9 @@ class Topic(models.Model):
 
     name = models.CharField(max_length=235, help_text="The name of the topic")
     description = models.TextField(help_text="A long description of that topic")
-    potential_mentors = models.ManyToManyField(UserProfile, related_name="mentors")
-    potential_mentees = models.ManyToManyField(UserProfile, related_name="mentees")
+    potential_mentors = models.ManyToManyField(
+        UserProfile, related_name="mentors", null=True, blank=True
+    )
+    potential_mentees = models.ManyToManyField(
+        UserProfile, related_name="mentees", null=True, blank=True
+    )

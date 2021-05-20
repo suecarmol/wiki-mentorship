@@ -21,7 +21,7 @@ class Chat(models.Model):
 
 class Message(models.Model):
     class Meta:
-        app_label = "messages"
+        app_label = "chats"
         verbose_name = "message"
         verbose_name_plural = "messages"
 
